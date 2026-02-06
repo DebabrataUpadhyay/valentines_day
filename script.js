@@ -1,4 +1,13 @@
-// Shayari lines revealed by images
+// IMAGES & SHAYARI
+const images=[
+"images/photo1.jpg",
+"images/photo2.jpg",
+"images/photo3.jpg",
+"images/photo4.jpg",
+"images/photo5.jpg",
+"images/photo6.jpg"
+];
+
 const shayari=[
 "Hum mile toh laga zindagi mil gayi ❤️",
 "Tumhari muskurahat meri roshni hai ✨",
@@ -7,6 +16,8 @@ const shayari=[
 "Dil ki har dhadkan tumhari hai 💕",
 "Ab bas tum ho… aur tum hi ho ❤️"
 ];
+
+let step=0;
 
 // NO escape
 const noBtn=document.getElementById("noBtn");
@@ -18,10 +29,7 @@ noBtn.style.top=Math.random()*80+"%";
 
 // YES clicked
 function acceptLove(){
-
-// play music
 document.getElementById("bgMusic").play();
-
 confetti();
 emojiRain();
 
@@ -29,11 +37,23 @@ document.getElementById("startScreen").style.display="none";
 document.getElementById("mainContent").style.display="block";
 }
 
-// Reveal shayari
-function reveal(btn,i){
-btn.innerText=shayari[i];
-btn.style.background="white";
-btn.style.color="#ff4081";
+// Reveal next
+function revealLine(){
+
+document.getElementById("shayariText").innerText=shayari[step];
+
+step++;
+
+if(step < images.length){
+setTimeout(()=>{
+document.getElementById("storyImage").src=images[step];
+document.getElementById("shayariText").innerText="";
+},1500);
+}
+else{
+document.getElementById("revealBtn").style.display="none";
+document.getElementById("finalBtn").style.display="inline-block";
+}
 }
 
 // Confetti
@@ -69,7 +89,7 @@ setTimeout(()=>e.remove(),3000);
 },200);
 }
 
-// Final message
+// FINAL MESSAGE
 function finalLove(){
 document.body.innerHTML=`
 <div style="
