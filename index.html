@@ -8,42 +8,37 @@
 <title>For You ❤️</title>
 
 <link rel="stylesheet" href="style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/index.umd.js"></script>
 
 </head>
 
 <body>
 
-<!-- Landing -->
 <section id="landing">
-    <div class="overlay">
-        <h1>Our Story ❤️</h1>
-        <button onclick="enterSite()">Enter</button>
-    </div>
+<div class="overlay">
+<h1>Our Story ❤️</h1>
+<button onclick="enterSite()">Enter</button>
+</div>
 </section>
 
-<!-- Main -->
 <div id="mainContent">
 
 <h2>Memories With You ✨</h2>
 
 <div class="gallery">
-    <img src="images/photo1.jpg">
-    <img src="images/photo2.jpg">
-    <img src="images/photo3.jpg">
-    <img src="images/photo4.jpg">
-    <img src="images/photo5.jpg">
-    <img src="images/photo6.jpg">
-    <img src="images/photo7.jpg">
-    <img src="images/photo8.jpg">
-    <img src="images/photo9.jpg">
+<img src="images/photo1.jpg">
+<img src="images/photo2.jpg">
+<img src="images/photo3.jpg">
+<img src="images/photo4.jpg">
+<img src="images/photo5.jpg">
+<img src="images/photo6.jpg">
+<img src="images/photo7.jpg">
+<img src="images/photo8.jpg">
+<img src="images/photo9.jpg">
 </div>
 
 <h2>A Letter For You 💌</h2>
-<div id="letterBox">
-    <p id="typedLetter"></p>
-</div>
+<div id="letterBox"><p id="typedLetter"></p></div>
 
 <h2>Reasons I Love You ❤️</h2>
 
@@ -75,18 +70,36 @@
 
 </div>
 
-<button class="proposalBtn" onclick="startProposal()">Click Me ❤️</button>
-<div id="proposalText"></div>
+<h2>One Important Question ❤️</h2>
+
+<div id="proposalBox">
+<h3>
+Miss Riya Sardar,<br>
+Will you be my Valentine forever?
+</h3>
+
+<div class="btnRow">
+<button id="yesBtn" onclick="sayYes()">YES ❤️</button>
+<button id="noBtn">NO 🙈</button>
+</div>
+
+<p id="proposalResult"></p>
+
+<button id="foreverBtn" onclick="finalLove()" style="display:none;">
+Be Mine Forever 💍
+</button>
+</div>
+
+<button class="proposalBtn" onclick="startProposal()">Fireworks ❤️</button>
 <canvas id="fireworks"></canvas>
 
 </div>
 
-<!-- Secret Button -->
 <div id="secretHeart" onclick="revealSecret()">❤️</div>
 <div id="secretMsg"></div>
 
 <audio id="bgMusic" loop>
-<source src="music/love.mp3" type="audio/mpeg">
+<source src="love.mp3" type="audio/mpeg">
 </audio>
 
 <script src="script.js"></script>
