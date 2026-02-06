@@ -1,4 +1,14 @@
-// NO button escape
+// Shayari lines revealed by images
+const shayari=[
+"Hum mile toh laga zindagi mil gayi ❤️",
+"Tumhari muskurahat meri roshni hai ✨",
+"Har khushi tumse shuru hoti hai 💖",
+"Tum ho toh safar haseen hai 🌸",
+"Dil ki har dhadkan tumhari hai 💕",
+"Ab bas tum ho… aur tum hi ho ❤️"
+];
+
+// NO escape
 const noBtn=document.getElementById("noBtn");
 noBtn.addEventListener("mouseover",()=>{
 noBtn.style.position="absolute";
@@ -6,17 +16,22 @@ noBtn.style.left=Math.random()*80+"%";
 noBtn.style.top=Math.random()*80+"%";
 });
 
-// Accept love
+// YES clicked
 function acceptLove(){
+
+// play music
+document.getElementById("bgMusic").play();
+
 confetti();
 emojiRain();
+
 document.getElementById("startScreen").style.display="none";
 document.getElementById("mainContent").style.display="block";
 }
 
-// Reveal messages
-function reveal(btn){
-btn.innerText="❤️";
+// Reveal shayari
+function reveal(btn,i){
+btn.innerText=shayari[i];
 btn.style.background="white";
 btn.style.color="#ff4081";
 }
@@ -41,7 +56,7 @@ const fallStyle=document.createElement("style");
 fallStyle.innerHTML=`@keyframes fall{to{transform:translateY(110vh);}}`;
 document.head.appendChild(fallStyle);
 
-// Emoji celebration
+// Emoji rain
 function emojiRain(){
 const emojis=["😍","❤️","😘","💖","🥰"];
 setInterval(()=>{
