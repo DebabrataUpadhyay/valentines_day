@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For You ❤️</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<!-- FIRST QUESTION SCREEN -->
-<div id="startScreen">
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+<source src="love.mp3" type="audio/mpeg">
+</audio>
 
+<!-- FIRST SCREEN -->
+<div id="startScreen">
 <h1>
 Miss Riya Sardar,<br>
 Will you be mine forever?
@@ -24,11 +26,9 @@ Will you be mine forever?
 <button onclick="acceptLove()">YES ❤️</button>
 <button id="noBtn">NO 🙈</button>
 </div>
-
 </div>
 
-
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <div id="mainContent">
 
 <h2>Click the memories ❤️</h2>
@@ -37,44 +37,32 @@ Will you be mine forever?
 
 <div class="imgCard">
 <img src="images/photo1.jpg">
-<button onclick="reveal(this)">
-Dil se dil tak ka safar tumse hi hai ❤️
-</button>
+<button onclick="reveal(this,0)">Reveal ❤️</button>
 </div>
 
 <div class="imgCard">
 <img src="images/photo2.jpg">
-<button onclick="reveal(this)">
-Teri muskurahat meri duniya hai ✨
-</button>
+<button onclick="reveal(this,1)">Reveal ❤️</button>
 </div>
 
 <div class="imgCard">
 <img src="images/photo3.jpg">
-<button onclick="reveal(this)">
-Har lamha tumhare saath khaas hai 💖
-</button>
+<button onclick="reveal(this,2)">Reveal ❤️</button>
 </div>
 
 <div class="imgCard">
 <img src="images/photo4.jpg">
-<button onclick="reveal(this)">
-Tum meri favourite notification ho 😄
-</button>
+<button onclick="reveal(this,3)">Reveal ❤️</button>
 </div>
 
 <div class="imgCard">
 <img src="images/photo5.jpg">
-<button onclick="reveal(this)">
-Zindagi tumhare bina adhuri hai ❤️
-</button>
+<button onclick="reveal(this,4)">Reveal ❤️</button>
 </div>
 
 <div class="imgCard">
 <img src="images/photo6.jpg">
-<button onclick="reveal(this)">
-Tum ho toh sab kuch hai 🌸
-</button>
+<button onclick="reveal(this,5)">Reveal ❤️</button>
 </div>
 
 </div>
@@ -86,6 +74,5 @@ Be Mine Forever 💍
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
