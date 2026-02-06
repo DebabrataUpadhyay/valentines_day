@@ -1,106 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For You ❤️</title>
 
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/index.umd.js"></script>
 
 </head>
 
 <body>
 
-<section id="landing">
-<div class="overlay">
-<h1>Our Story ❤️</h1>
-<button onclick="enterSite()">Enter</button>
-</div>
-</section>
+<!-- FIRST QUESTION SCREEN -->
+<div id="startScreen">
 
-<div id="mainContent">
-
-<h2>Memories With You ✨</h2>
-
-<div class="gallery">
-<img src="images/photo1.jpg">
-<img src="images/photo2.jpg">
-<img src="images/photo3.jpg">
-<img src="images/photo4.jpg">
-<img src="images/photo5.jpg">
-<img src="images/photo6.jpg">
-<img src="images/photo7.jpg">
-<img src="images/photo8.jpg">
-<img src="images/photo9.jpg">
-</div>
-
-<h2>A Letter For You 💌</h2>
-<div id="letterBox"><p id="typedLetter"></p></div>
-
-<h2>Reasons I Love You ❤️</h2>
-
-<div class="reasonGrid">
-
-<div class="card" onclick="flip(this)">
-<div class="cardInner">
-<div class="front">Click ❤️</div>
-<div class="back">Your smile lights my world</div>
-</div></div>
-
-<div class="card" onclick="flip(this)">
-<div class="cardInner">
-<div class="front">Click ❤️</div>
-<div class="back">You make ordinary days magical</div>
-</div></div>
-
-<div class="card" onclick="flip(this)">
-<div class="cardInner">
-<div class="front">Click ❤️</div>
-<div class="back">Every laugh with you is priceless</div>
-</div></div>
-
-<div class="card" onclick="flip(this)">
-<div class="cardInner">
-<div class="front">Click ❤️</div>
-<div class="back">You are my peace & chaos</div>
-</div></div>
-
-</div>
-
-<h2>One Important Question ❤️</h2>
-
-<div id="proposalBox">
-<h3>
+<h1>
 Miss Riya Sardar,<br>
-Will you be my Valentine forever?
-</h3>
+Will you be mine forever?
+</h1>
 
 <div class="btnRow">
-<button id="yesBtn" onclick="sayYes()">YES ❤️</button>
+<button onclick="acceptLove()">YES ❤️</button>
 <button id="noBtn">NO 🙈</button>
 </div>
 
-<p id="proposalResult"></p>
+</div>
 
-<button id="foreverBtn" onclick="finalLove()" style="display:none;">
-Be Mine Forever 💍
+
+<!-- MAIN CONTENT -->
+<div id="mainContent">
+
+<h2>Click the memories ❤️</h2>
+
+<div class="imageGrid">
+
+<div class="imgCard">
+<img src="images/photo1.jpg">
+<button onclick="reveal(this)">
+Dil se dil tak ka safar tumse hi hai ❤️
 </button>
 </div>
 
-<button class="proposalBtn" onclick="startProposal()">Fireworks ❤️</button>
-<canvas id="fireworks"></canvas>
+<div class="imgCard">
+<img src="images/photo2.jpg">
+<button onclick="reveal(this)">
+Teri muskurahat meri duniya hai ✨
+</button>
+</div>
+
+<div class="imgCard">
+<img src="images/photo3.jpg">
+<button onclick="reveal(this)">
+Har lamha tumhare saath khaas hai 💖
+</button>
+</div>
+
+<div class="imgCard">
+<img src="images/photo4.jpg">
+<button onclick="reveal(this)">
+Tum meri favourite notification ho 😄
+</button>
+</div>
+
+<div class="imgCard">
+<img src="images/photo5.jpg">
+<button onclick="reveal(this)">
+Zindagi tumhare bina adhuri hai ❤️
+</button>
+</div>
+
+<div class="imgCard">
+<img src="images/photo6.jpg">
+<button onclick="reveal(this)">
+Tum ho toh sab kuch hai 🌸
+</button>
+</div>
 
 </div>
 
-<div id="secretHeart" onclick="revealSecret()">❤️</div>
-<div id="secretMsg"></div>
+<button id="finalBtn" onclick="finalLove()">
+Be Mine Forever 💍
+</button>
 
-<audio id="bgMusic" loop>
-<source src="love.mp3" type="audio/mpeg">
-</audio>
+</div>
 
 <script src="script.js"></script>
 
