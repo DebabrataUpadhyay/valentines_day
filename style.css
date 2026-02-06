@@ -1,134 +1,63 @@
 body{
 margin:0;
-font-family:Arial,sans-serif;
+font-family:Arial;
 background:black;
 color:white;
 text-align:center;
 }
 
-#landing{
+/* START SCREEN */
+#startScreen{
 height:100vh;
-background:url("images/photo1.jpg") center/cover no-repeat;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:20px;
 }
 
-.overlay{
-background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:20px;
-}
-
-button{
-padding:12px 20px;
-font-size:16px;
+.btnRow button{
+padding:12px 25px;
+margin:10px;
+font-size:18px;
 border:none;
 border-radius:25px;
 cursor:pointer;
 }
 
-#mainContent{display:none;padding:20px;}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:12px;
-}
-
-.gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:14px;
-}
-
-#letterBox{
-width:90%;
-max-width:700px;
-margin:auto;
-background:rgba(255,255,255,0.1);
+#mainContent{
+display:none;
 padding:20px;
-border-radius:15px;
-min-height:120px;
 }
 
-.reasonGrid{
+.imageGrid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:15px;
 }
 
-.card{height:120px;perspective:1000px;}
-.cardInner{
-height:100%;
-transition:transform .6s;
-transform-style:preserve-3d;
-}
-.card.flipped .cardInner{transform:rotateY(180deg);}
-
-.front,.back{
-position:absolute;
+.imgCard img{
 width:100%;
-height:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius:12px;
-backface-visibility:hidden;
+border-radius:14px;
 }
 
-.front{background:#ff4081;}
-.back{background:white;color:#ff4081;transform:rotateY(180deg);}
-
-#proposalBox{
-max-width:500px;
-margin:40px auto;
-background:rgba(255,255,255,0.1);
-padding:25px;
-border-radius:18px;
+.imgCard button{
+margin-top:10px;
+width:100%;
+background:#ff4081;
+color:white;
 }
 
-.btnRow{display:flex;justify-content:center;gap:15px;}
-
-#yesBtn{background:#ff4081;color:white;}
-#noBtn{background:#333;color:white;}
-
-#foreverBtn{
+#finalBtn{
+margin-top:40px;
 background:gold;
 color:black;
-margin-top:20px;
+padding:15px 25px;
+border:none;
+border-radius:25px;
+font-size:18px;
 }
 
-canvas{
-width:100%;
-height:100%;
-position:fixed;
-top:0;
-left:0;
-pointer-events:none;
-}
-
-#secretHeart{
-position:fixed;
-bottom:8px;
-right:10px;
-opacity:0.15;
-cursor:pointer;
-}
-
-#secretMsg{
-position:fixed;
-bottom:40px;
-right:20px;
-background:white;
-color:#ff4081;
-padding:15px;
-border-radius:12px;
-display:none;
-}
-
+/* emoji rain */
 .emoji{
 position:fixed;
 font-size:24px;
@@ -138,9 +67,4 @@ animation:floatEmoji 3s linear;
 @keyframes floatEmoji{
 from{transform:translateY(0);}
 to{transform:translateY(-100vh);}
-}
-
-@media(max-width:600px){
-.gallery img{height:160px;}
-.card{height:100px;}
 }
