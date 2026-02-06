@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/index.umd.js"></script>
+
+</head>
+
+<body>
+
+<!-- Landing -->
+<section id="landing">
+    <div class="overlay">
+        <h1>Our Story ❤️</h1>
+        <button onclick="enterSite()">Enter</button>
+    </div>
+</section>
+
+<!-- Main -->
+<div id="mainContent">
+
+<h2>Memories With You ✨</h2>
+
+<div class="gallery">
+    <img src="images/photo1.jpg">
+    <img src="images/photo2.jpg">
+    <img src="images/photo3.jpg">
+    <img src="images/photo4.jpg">
+    <img src="images/photo5.jpg">
+    <img src="images/photo6.jpg">
+    <img src="images/photo7.jpg">
+    <img src="images/photo8.jpg">
+    <img src="images/photo9.jpg">
+</div>
+
+<h2>A Letter For You 💌</h2>
+<div id="letterBox">
+    <p id="typedLetter"></p>
+</div>
+
+<h2>Reasons I Love You ❤️</h2>
+
+<div class="reasonGrid">
+
+<div class="card" onclick="flip(this)">
+<div class="cardInner">
+<div class="front">Click ❤️</div>
+<div class="back">Your smile lights my world</div>
+</div></div>
+
+<div class="card" onclick="flip(this)">
+<div class="cardInner">
+<div class="front">Click ❤️</div>
+<div class="back">You make ordinary days magical</div>
+</div></div>
+
+<div class="card" onclick="flip(this)">
+<div class="cardInner">
+<div class="front">Click ❤️</div>
+<div class="back">Every laugh with you is priceless</div>
+</div></div>
+
+<div class="card" onclick="flip(this)">
+<div class="cardInner">
+<div class="front">Click ❤️</div>
+<div class="back">You are my peace & chaos</div>
+</div></div>
+
+</div>
+
+<button class="proposalBtn" onclick="startProposal()">Click Me ❤️</button>
+<div id="proposalText"></div>
+<canvas id="fireworks"></canvas>
+
+</div>
+
+<!-- Secret Button -->
+<div id="secretHeart" onclick="revealSecret()">❤️</div>
+<div id="secretMsg"></div>
+
+<audio id="bgMusic" loop>
+<source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
