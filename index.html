@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For You ❤️</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- AUDIO -->
+<!-- MUSIC -->
 <audio id="bgMusic" loop>
 <source src="love.mp3" type="audio/mpeg">
 </audio>
@@ -28,51 +30,28 @@ Will you be mine forever?
 </div>
 </div>
 
-<!-- MAIN -->
+<!-- MAIN STORY -->
 <div id="mainContent">
 
-<h2>Click the memories ❤️</h2>
+<h2>Our Story Unfolds ❤️</h2>
 
-<div class="imageGrid">
+<div id="storyBox">
+<img id="storyImage" src="images/photo1.jpg">
 
-<div class="imgCard">
-<img src="images/photo1.jpg">
-<button onclick="reveal(this,0)">Reveal ❤️</button>
+<button id="revealBtn" onclick="revealLine()">
+Reveal ❤️
+</button>
+
+<p id="shayariText"></p>
 </div>
 
-<div class="imgCard">
-<img src="images/photo2.jpg">
-<button onclick="reveal(this,1)">Reveal ❤️</button>
-</div>
-
-<div class="imgCard">
-<img src="images/photo3.jpg">
-<button onclick="reveal(this,2)">Reveal ❤️</button>
-</div>
-
-<div class="imgCard">
-<img src="images/photo4.jpg">
-<button onclick="reveal(this,3)">Reveal ❤️</button>
-</div>
-
-<div class="imgCard">
-<img src="images/photo5.jpg">
-<button onclick="reveal(this,4)">Reveal ❤️</button>
-</div>
-
-<div class="imgCard">
-<img src="images/photo6.jpg">
-<button onclick="reveal(this,5)">Reveal ❤️</button>
-</div>
-
-</div>
-
-<button id="finalBtn" onclick="finalLove()">
+<button id="finalBtn" onclick="finalLove()" style="display:none;">
 Be Mine Forever 💍
 </button>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
