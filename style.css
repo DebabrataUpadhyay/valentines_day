@@ -1,6 +1,6 @@
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:black;
 color:white;
 text-align:center;
@@ -27,11 +27,7 @@ font-size:16px;
 border:none;
 border-radius:25px;
 cursor:pointer;
-max-width:90%;
 }
-
-h1{font-size:clamp(28px,6vw,48px);}
-h2{font-size:clamp(20px,4vw,32px);}
 
 #mainContent{display:none;padding:20px;}
 
@@ -55,7 +51,6 @@ margin:auto;
 background:rgba(255,255,255,0.1);
 padding:20px;
 border-radius:15px;
-font-size:clamp(15px,2.8vw,18px);
 min-height:120px;
 }
 
@@ -87,9 +82,22 @@ backface-visibility:hidden;
 .front{background:#ff4081;}
 .back{background:white;color:#ff4081;transform:rotateY(180deg);}
 
-.proposalBtn{
-background:#ff4081;
-color:white;
+#proposalBox{
+max-width:500px;
+margin:40px auto;
+background:rgba(255,255,255,0.1);
+padding:25px;
+border-radius:18px;
+}
+
+.btnRow{display:flex;justify-content:center;gap:15px;}
+
+#yesBtn{background:#ff4081;color:white;}
+#noBtn{background:#333;color:white;}
+
+#foreverBtn{
+background:gold;
+color:black;
 margin-top:20px;
 }
 
@@ -119,6 +127,17 @@ color:#ff4081;
 padding:15px;
 border-radius:12px;
 display:none;
+}
+
+.emoji{
+position:fixed;
+font-size:24px;
+animation:floatEmoji 3s linear;
+}
+
+@keyframes floatEmoji{
+from{transform:translateY(0);}
+to{transform:translateY(-100vh);}
 }
 
 @media(max-width:600px){
