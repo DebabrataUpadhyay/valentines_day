@@ -6,6 +6,7 @@ color:white;
 text-align:center;
 }
 
+/* First Screen */
 #startScreen{
 height:100vh;
 display:flex;
@@ -23,27 +24,35 @@ border-radius:25px;
 cursor:pointer;
 }
 
+/* Story Section */
 #mainContent{
 display:none;
 padding:20px;
 }
 
-.imageGrid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+#storyBox{
+max-width:600px;
+margin:auto;
 }
 
-.imgCard img{
+#storyImage{
 width:100%;
-border-radius:14px;
+border-radius:15px;
 }
 
-.imgCard button{
-margin-top:10px;
-width:100%;
+#revealBtn{
+margin-top:15px;
 background:#ff4081;
 color:white;
+padding:12px 20px;
+border:none;
+border-radius:20px;
+}
+
+#shayariText{
+font-size:20px;
+margin-top:15px;
+min-height:40px;
 }
 
 #finalBtn{
@@ -56,6 +65,7 @@ border-radius:25px;
 font-size:18px;
 }
 
+/* Emoji */
 .emoji{
 position:fixed;
 font-size:24px;
@@ -65,4 +75,10 @@ animation:floatEmoji 3s linear;
 @keyframes floatEmoji{
 from{transform:translateY(0);}
 to{transform:translateY(-100vh);}
+}
+
+/* Mobile */
+@media(max-width:600px){
+h1{font-size:22px;}
+#shayariText{font-size:18px;}
 }
